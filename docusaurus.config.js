@@ -31,7 +31,7 @@ module.exports = {
       appId: 'S0IDD0YGLZ',
     },
     navbar: {
-      title: 'Uniswap Docs',
+      title: 'DeLightFi Docs',
       logo: {
         alt: 'Uniswap Unicorn',
         src: 'img/uni_dark_icon.svg',
@@ -68,23 +68,11 @@ module.exports = {
           className: 'persistent',
         },
         {
-          label: 'Whitepaper',
-          to: 'https://uniswap.org/whitepaper-v3.pdf',
-          position: 'right',
-          className: 'persistent',
-        },
-        {
-          href: 'https://github.com/uniswap/uniswap-docs',
+          href: 'https://github.com/DeLightFi',
           label: 'GitHub',
           position: 'right',
           className: 'persistent',
-        },
-        {
-          href: 'https://unigrants.org/',
-          label: 'Grants',
-          position: 'right',
-          className: 'persistent',
-        },
+        }
       ],
     },
     footer: {
@@ -98,38 +86,22 @@ module.exports = {
               href: 'https://forms.gle/13XtjmkwdXQ2jMn26',
             },
             {
-              label: 'Bug Bounty',
-              href: 'https://github.com/Uniswap/uniswap-v3-periphery/blob/main/bug-bounty.md',
-            },
-            {
               label: '#dev-chat',
-              href: 'https://discord.gg/ybKVQUWb4s',
-            },
-            {
-              label: 'Whitepaper',
-              href: 'https://uniswap.org/whitepaper-v3.pdf',
-            },
+              href: 'https://discord.gg/hJupqTrK4G',
+            }
           ],
         },
         {
           title: 'Github',
           items: [
             {
-              label: 'uniswap-v3-core',
-              href: 'https://github.com/Uniswap/uniswap-v3-core',
+              label: 'morphine-contracts-cairo0',
+              href: 'https://github.com/DeLightFi/Morphine-contracts',
             },
             {
-              label: 'uniswap-v3-sdk',
-              href: 'https://github.com/Uniswap/uniswap-v3-sdk',
-            },
-            {
-              label: 'uniswap-v3-periphery',
-              href: 'https://github.com/Uniswap/uniswap-v3-periphery',
-            },
-            {
-              label: 'Deployment addresses',
-              href: 'https://github.com/Uniswap/uniswap-v3-periphery/blob/main/deploys.md',
-            },
+              label: 'morphine-backend',
+              href: 'https://github.com/DeLightFi/Morphine-backend',
+            }
           ],
         },
         {
@@ -137,23 +109,15 @@ module.exports = {
           items: [
             {
               label: 'Home',
-              href: 'https://uniswap.org/',
+              href: 'https://delightfi.xyz/',
             },
             {
-              label: 'App',
-              href: 'https://app.uniswap.org/',
+              label: 'Morphine testnet',
+              href: 'https://app.morphine.store/',
             },
             {
-              label: 'Analytics',
-              href: 'https://info.uniswap.org/home',
-            },
-            {
-              label: 'Token Lists',
-              href: 'https://tokenlists.org/',
-            },
-            {
-              label: 'Brand Assets',
-              href: 'https://uniswap.org/Uniswap_brand_assets.zip',
+              label: 'Starken ',
+              href: 'https://starkendefi.xyz/',
             },
           ],
         },
@@ -161,12 +125,8 @@ module.exports = {
           title: 'Community',
           items: [
             {
-              label: 'Governance',
-              href: 'https://gov.uniswap.org/',
-            },
-            {
               label: 'Discord',
-              href: 'https://discord.gg/ybKVQUWb4s',
+              href: 'https://discord.gg/hJupqTrK4G',
             },
             {
               label: 'Twitter',
@@ -174,7 +134,7 @@ module.exports = {
             },
             {
               label: 'Blog',
-              href: 'https://uniswap.org/blog/',
+              href: 'https://medium.com/@delightfi.contact',
             },
           ],
         },

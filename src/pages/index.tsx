@@ -6,7 +6,7 @@ import styled from '@emotion/styled'
 import Discord from '@site/static/img/discord.svg'
 import GitHub from '@site/static/img/github.svg'
 import Npm from '@site/static/img/npm.svg'
-import UGP from '@site/static/img/UGP.png'
+import OnlyDust from '../../public/onlydust.png'
 import Layout from '@theme/Layout'
 import ThemedImage from '@theme/ThemedImage'
 import { TraceEvent } from '@uniswap/analytics'
@@ -23,106 +23,102 @@ import SearchBarWithAnalytics from '../theme/SearchBar'
 
 export const actions = [
   {
-    title: 'What is Uniswap',
+    title: 'What is DeLightFi',
     icon: Info,
     to: '/concepts/overview',
-    text: `Learn about the core concepts of the Uniswap Protocol, Swaps, Pools, Concentrated Liquidity and more.`,
+    text: `Learn about the core concepts of Morphine and Starken.`,
   },
+  // {
+  //   title: 'Integrate with Morphine',
+  //   icon: HelpCircle,
+  //   to: '/sdk/v3/overview',
+  //   text: `Learn how to integrate with Morphine by building a dApp through guided examples.`,
+  // },
   {
-    title: 'Integrate with Uniswap',
+    title: 'Integrate with Starken',
     icon: HelpCircle,
     to: '/sdk/v3/overview',
-    text: `Learn how to integrate with Uniswap by building a dApp through guided examples.`,
+    text: `Use our SDK to make your life easier building DeFi on Starknet`,
   },
   {
-    title: 'The Uniswap smart contracts',
+    title: 'Morphine smart contracts',
     icon: BookOpen,
     to: '/contracts/v3/overview',
-    text: `Learn about the architecture of the Uniswap Protocol smart contracts through guided examples.`,
+    text: `Learn about the architecture of Morphine Protocol smart contracts through guided examples.`,
   },
 ]
 
 export const developerLinks = [
   {
-    title: 'uniswap-v3-core',
-    href: 'https://github.com/Uniswap/uniswap-v3-core',
+    title: 'morphine-contracts-cairo0',
+    href: 'https://github.com/DeLightFi/Morphine-contracts',
     icon: GitHub,
   },
   {
-    title: 'uniswap-v3-sdk',
-    href: 'https://github.com/Uniswap/uniswap-v3-sdk',
+    title: 'morphine-backend',
+    href: 'https://github.com/DeLightFi/Morphine-backend',
     icon: GitHub,
   },
   {
-    title: 'uniswap-v3-periphery',
-    href: 'https://github.com/Uniswap/uniswap-v3-periphery',
+    title: 'black-scholes-cairo1',
+    href: 'https://github.com/DeLightFi/Black-Scholes',
     icon: GitHub,
-  },
-  {
-    title: 'Deployment addresses',
-    href: 'https://github.com/Uniswap/uniswap-v3-periphery/blob/main/deploys.md',
-    icon: GitHub,
-  },
-  {
-    title: 'widgets',
-    href: 'https://www.npmjs.com/package/@uniswap/widgets',
-    icon: Npm,
-  },
+  }
 ]
 
 export const dAppGuides = [
-  {
-    title: 'Fetch token prices',
-    text: 'Fetch the price of tokens in a specific Pool',
-    to: 'sdk/v3/guides/quoting',
-  },
-  {
-    title: 'Create a Trade',
-    text: 'Fetch a Quote for a Trade and execute the Trade',
-    to: '/sdk/v3/guides/trading',
-  },
-  {
-    title: 'Route trades',
-    text: 'Use Routing to get optimized prices for your Trades',
-    to: '/sdk/v3/guides/routing',
-  },
-  {
-    title: 'Provide liquidity',
-    text: "Contribute to a Pool's liquidity by using tokens to earn fees",
-    to: '/sdk/v3/guides/liquidity/minting',
-  },
-  {
-    title: 'UI Component',
-    text: 'Integrate with the Swap Widget, a React component that works out of the box ',
-    to: '/sdk/swap-widget/overview',
-  },
+  // {
+  //   title: 'Fetch token prices',
+  //   text: 'Fetch the price of tokens in a specific Pool',
+  //   to: 'sdk/v3/guides/quoting',
+  // },
+  // {
+  //   title: 'Create a Trade',
+  //   text: 'Fetch a Quote for a Trade and execute the Trade',
+  //   to: '/sdk/v3/guides/trading',
+  // },
+  // {
+  //   title: 'Route trades',
+  //   text: 'Use Routing to get optimized prices for your Trades',
+  //   to: '/sdk/v3/guides/routing',
+  // },
+  // {
+  //   title: 'Provide liquidity',
+  //   text: "Contribute to a Pool's liquidity by using tokens to earn fees",
+  //   to: '/sdk/v3/guides/liquidity/minting',
+  // },
+  // {
+  //   title: 'UI Component',
+  //   text: 'Integrate with the Swap Widget, a React component that works out of the box ',
+  //   to: '/sdk/swap-widget/overview',
+  // },
 ]
 export const smartContractGuides = [
-  {
-    title: 'Setup your environment',
-    text: 'Prepare your local environment by installing the required dependencies',
-    to: '/contracts/v3/guides/local-environment',
-  },
-  {
-    title: 'Implement a Swap',
-    text: 'Start swapping from a smart contract in Solidity',
-    to: '/contracts/v3/guides/swaps/single-swaps',
-  },
-  {
-    title: 'Provide Liquidity',
-    text: 'Provide liquidity from a smart contract in Solidity',
-    to: '/contracts/v3/guides/providing-liquidity/setting-up',
-  },
-  {
-    title: 'Mine Liquidity',
-    text: 'Start Mining liquidity from a smart contract in Solidity',
-    to: '/contracts/v3/guides/liquidity-mining/overview',
-  },
-  {
-    title: 'Implement Flash Swaps',
-    text: 'Implement Flash Swaps from a smart contract in Solidity',
-    to: '/contracts/v3/guides/flash-integrations/inheritance-constructors',
-  },
+  // {
+  //   title: 'Setup your environment',
+  //   text: 'Prepare your local environment by installing the required dependencies',
+  //   to: '/contracts/v3/guides/local-environment',
+  // },
+  // {
+  //   title: 'Implement a Swap',
+  //   text: 'Start swapping from a smart contract in Solidity',
+  //   to: '/contracts/v3/guides/swaps/single-swaps',
+  // },
+  // {
+  //   title: 'Provide Liquidity',
+  //   text: 'Provide liquidity from a smart contract in Solidity',
+  //   to: '/contracts/v3/guides/providing-liquidity/setting-up',
+  // },
+  // {
+  //   title: 'Mine Liquidity',
+  //   text: 'Start Mining liquidity from a smart contract in Solidity',
+  //   to: '/contracts/v3/guides/liquidity-mining/overview',
+  // },
+  // {
+  //   title: 'Implement Flash Swaps',
+  //   text: 'Implement Flash Swaps from a smart contract in Solidity',
+  //   to: '/contracts/v3/guides/flash-integrations/inheritance-constructors',
+  // },
 ]
 
 const Container = styled.div`
@@ -310,7 +306,7 @@ export default function Home() {
               alignItems: 'center',
             }}
           >
-            <h1 style={{ fontWeight: 600 }}> Welcome to Uniswap Docs</h1>
+            <h1 style={{ fontWeight: 600 }}> Welcome to DeLightFi Docs</h1>
             <HideMedium>
               <SearchBarWithAnalytics />
             </HideMedium>
@@ -348,7 +344,7 @@ export default function Home() {
             ))}
           </Row>
         </DocsHeader>
-        <TwoRow
+        {/* <TwoRow
           style={{
             gap: '56px',
             marginTop: '4rem',
@@ -412,7 +408,7 @@ export default function Home() {
               ))}
             </div>
           </div>
-        </TwoRow>
+        </TwoRow> */}
         <hr />
         <TwoRow
           style={{
@@ -420,13 +416,8 @@ export default function Home() {
             alignItems: 'center',
           }}
         >
-          <StyledImage
-            style={{ maxHeight: '400px' }}
-            sources={{
-              light: useBaseUrl('/img/use.png'),
-              dark: useBaseUrl('/img/use2.png'),
-            }}
-          />
+
+
           <div>
             <h2>Developer Links</h2>
             {developerLinks.map((action) => (
@@ -476,22 +467,7 @@ export default function Home() {
               </CenterCard>
             </Link>
           </TraceEvent>
-          <TraceEvent
-            events={[BrowserEvent.onClick]}
-            element={ElementName.GRANTS}
-            section={SectionName.BOTTOM_MENU_LINKS}
-            name={SharedEventName.PAGE_CLICKED}
-          >
-            <Link style={{ textDecoration: 'none' }} href={'https://gov.uniswap.org/'}>
-              <CenterCard>
-                <MessageCircle style={{ width: '48px', height: '48px' }} />
-                <div>
-                  <h3>Forum</h3>
-                  <p>Discuss governance and more.</p>
-                </div>
-              </CenterCard>
-            </Link>
-          </TraceEvent>
+
           <TraceEvent
             events={[BrowserEvent.onClick]}
             section={SectionName.BOTTOM_MENU_LINKS}
@@ -505,7 +481,7 @@ export default function Home() {
                 </StyledIcon>
                 <div>
                   <h3>GitHub</h3>
-                  <p>View all Uniswap repositories.</p>
+                  <p>View all DeLightFi repositories.</p>
                 </div>
               </CenterCard>
             </Link>
@@ -528,12 +504,11 @@ export default function Home() {
               gap: '24px',
             }}
           >
-            <img src={UGP} width={'120px'} />
+            <img src={OnlyDust} width={'120px'} />
             <div>
-              <h2 style={{ marginBottom: '0.5rem' }}>Uniswap Grants Program</h2>
+              <h2 style={{ marginBottom: '0.5rem' }}>DeLightFi Grants Program, OnlyDust</h2>
               <p style={{ margin: '0rem' }}>
-                Uniswap Governance offers grant funding for people who are building apps, tools, and activities for
-                Uniswap Protocol users, builders, and community members.{' '}
+                DeLightFi provides high value to the Starknet DeFi ecosystem and can be eligible for grants distributed by OnlyDust
               </p>
             </div>
           </WideCard>
