@@ -1,6 +1,6 @@
 {
-  "name": "@uniswap/docs",
-  "description": "Uniswap docs",
+  "name": "@delightfi/docs",
+  "description": "DeLightFi docs",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",

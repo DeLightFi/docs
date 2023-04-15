@@ -294,7 +294,7 @@ const StyledIcon = styled.div`
 
 export default function Home() {
   return (
-    <Layout title={`Uniswap Docs`} description="Technical Documentation For The Uniswap Protocol">
+    <Layout title={`DeLightFi Docs`} description="Technical Documentation For DeLightFi">
       <Container>
         <DocsHeader>
           <div
@@ -314,10 +314,11 @@ export default function Home() {
           <StyledTitleImage
             sources={{
               light: useBaseUrl('/img/grow.png'),
-              dark: useBaseUrl('/img/grow2.png'),
+              dark: useBaseUrl('/img/grow.png'),
             }}
           />
           <Row>
+
             {actions.map((action) => (
               <TraceEvent
                 key={action.to}
@@ -448,9 +449,13 @@ export default function Home() {
               </TraceEvent>
             ))}
           </div>
+          <h3>
+            Starken Will be soon Open Source
+          </h3>
         </TwoRow>
         <hr />
         <Row>
+
           <TraceEvent
             events={[BrowserEvent.onClick]}
             element={ElementName.DISCORD}
