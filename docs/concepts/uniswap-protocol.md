@@ -1,40 +1,48 @@
 ---
 id: uniswap-protocol
-title: The Uniswap Protocol
+title: Morphine Protocol
 sidebar_position: 2
 ---
 
 
-## Introduction
+Morphine is a non-custodial, permissionless, undercollateralized money market protocol on Starknet that empowers users in their DeFi journey by providing low-risk, attractive APY lending opportunities and a comprehensive toolkit for position management. With features like composable leverage, automation, and seamless integration across a range of DeFi products, Morphine ensures a CEX user-friendly experience while upholding the highest standards of security and transparency in the space.
 
-The Uniswap protocol is a peer-to-peer[^1] system designed for exchanging cryptocurrencies [(ERC-20 Tokens)](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/) on the [Ethereum](https://ethereum.org/) blockchain. The protocol is implemented as a set of persistent, non-upgradable smart contracts; designed to prioritize censorship resistance, security, self-custody, and to function without any trusted intermediaries who may selectively restrict access.
+A first version has been released on Testnet goerli 2.
 
-There are currently three versions of the Uniswap protocol. V1 and V2 are open source and licensed under GPL. V3 is open source with slight modifications, which are viewable [here](https://github.com/Uniswap/uniswap-v3-core/blob/main/LICENSE). Each version of Uniswap, once deployed, will function in perpetuity, with 100% uptime, provided the continued existence of the Ethereum blockchain.
 
-## How does the Uniswap protocol compare to a typical market?
+## How Morphine is built different
 
-To understand how the Uniswap protocol differs from a traditional exchange, it is helpful to first look at two subjects: how the Automated Market Maker design deviates from traditional central limit order book-based exchanges, and how permissionless systems depart from conventional permissioned systems.
+|  | Perpetual (DYDX) | Money Market (Compound) | Morphine |
+|-----------|-----------|-----------|-----------|
+| Buying Power   | 1-30x   | 1-3x   | 1-15x   |
+| Borrow cost   | Funding rates   | interest rate  | yield generated - interest rate   |
+| Data Feed   | Chainlink   | Chainlink   | Pragma   |
+| Collateral in use   | limited   | limited   | UNI V2-V3 LP, 4626, LSDs  |
+| Management tools   | limits order: limited, not fully decentralized   | none   | Fully composable automations, permisionless task execution for a prime|
+| Interoperability  | None  | Complicated: require Instadapp like services  | Connected to the whole DeFi ecosystem through adapaters |
+| Multi-Borrow   | Yes  | Yes | No, pools are isolated   |
 
-### Order Book VS AMM
+## Why Starknet ? 
 
-Most publicly accessible markets use a central limit [order book](https://www.investopedia.com/terms/o/order-book.asp) style of exchange, where buyers and sellers create orders organized by price level that are progressively filled as demand shifts. Anyone who has traded stocks through brokerage firms will be familiar with an order book system.
+Morphine is built on Starknet, a ZK-rollup over Ethereum, for several key reasons that contribute to its overall functionality, efficiency, and security:
 
-The Uniswap protocol takes a different approach, using an Automated Market Maker (AMM), sometimes referred to as a Constant Function Market Maker, in place of an order book.
+### Scalability
 
-At a very high level, an AMM replaces the buy and sell orders in an order book market with a liquidity pool of two assets, both valued relative to each other. As one asset is traded for the other, the relative prices of the two assets shift, and a new market rate for both is determined. In this dynamic, a buyer or seller trades directly with the pool, rather than with specific orders left by other parties. The advantages and disadvantages of Automated Market Makers versus their traditional order book counterparts are under active research by a growing number of parties. We have collected some notable examples on our research page.
+ZK-rollups like Starknet significantly increase the transaction throughput by bundling multiple transactions into a single proof, which is then posted on the Ethereum blockchain. The lower costs associated with Morphine's use of Starknet makes liquidation and bot execution cheaper ensuring a wider range of users can access financial products, reflecting our commitment to promoting equality and inclusivity within the DeFi space.
 
-### Permissionless Systems
+### Security
 
-The second departure from traditional markets is the permissionless and immutable design of the Uniswap protocol. These design decisions were inspired by Ethereum's core tenets, and our commitment to the ideals of permissionless access and immutability as indispensable components of a future in which anyone in the world can access financial services without fear of discrimination or counter-party risk.
+Starknet inherits the security of the Ethereum blockchain while also leveraging zero-knowledge proofs to ensure the privacy and confidentiality of transactions. This helps protect user data and maintain a high level of security within the Morphine platform.
 
-Permissionless design means that the protocol's services are entirely open for public use, with no ability to selectively restrict who can or cannot use them. Anyone can swap, provide liquidity, or create new markets at will. This is a departure from traditional financial services, which typically restrict access based on geography, wealth status, and age.
+### Vision
 
-The protocol is also immutable, in other words not upgradeable. No party is able to pause the contracts, reverse trade execution, or otherwise change the behavior of the protocol in any way. It is worth noting that Uniswap Governance has the right (but no obligation) to divert a percentage of swap fees on any pool to a specified address. However, this capability is known to all participants in advance, and to prevent abuse, the percentage is constrained between 10% and 25%.
+Starknet is aligns with Ethereum's philosophy and vision for a decentralized future. As pioneers in the industry, both Starknet and Ethereum have robust and supportive communities that contribute to the growth of a thriving DeFi ecosystem. By choosing Starknet, Morphine actively supports and participates in this vibrant ecosystem, benefiting from its innovative developments and collaborative spirit.
 
-## Where can I find more information
+### Account abstraction
 
-For research into the economics of AMMs, game theory, or optimization research, check out our [research](./research.md) page.
+StarkNet's account abstraction is a feature that simplifies and enhances the user experience in crypto, Gaming and DeFi applications. Account abstraction allows users to interact with various DeFi applications without having to manage multiple addresses and private keys. This simplification can make Morphine more accessible and user-friendly, particularly for users who are new to the DeFi space.
 
-For new features implemented in V3 that expand and refine the AMM design, see the [V3 Concepts](./protocol/concentrated-liquidity.md) page.
 
-[^1]: Ethereum protocols are sometimes referred to as peer-to-contract systems as well. These are similar to a peer-to-peer systems, but with immutable, persistent programs known as smart contracts taking the place of a peer.
+### Yield opportunities
+
+Starknet is a young Chain , many DeFi applications have been created and came out with a Liquidiy Mining program to incentives users.  Morphine will allow you to get leverage on it.

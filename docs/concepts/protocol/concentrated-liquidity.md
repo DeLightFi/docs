@@ -1,53 +1,57 @@
 ---
-id: concentrated-liquidity
-title: Concentrated Liquidity
+id: lending-pools
+title: Lending Pools
 sidebar_position: 1
----
-
-  <div>
-  <video width="100%" height="100%" playsInline controls loop>
-  <source src="https://gateway.pinata.cloud/ipfs/QmTf6EueKk5ZJ2KQwt1ZCHxRaogYVRci2U5uKRo8NeCmoB" />
-  Your browser does not support the video tag.
-  </video>
-  </div>
-
 ---
 
 ## Introduction
 
-The defining idea of Uniswap v3 is concentrated liquidity: liquidity that is allocated within a custom price range.
-In earlier versions, liquidity was distributed uniformly along the price curve between 0 and infinity.
+Lending pool protocols allow any crypto holder to lend their digital assets to other users. This means anyone can benefit from the opportunity to charge interest (that is, generate a passive rewards) as loans are repaid by those who borrow your crypto.
 
-The previously uniform distribution allowed trading across the entire price interval (0, ∞) without any loss of liquidity. However, in many pools, the majority of the liquidity was never used.
+Users can deposit their assets into Morphine pools to provide liquidity for borrowers. By doing so, they can earn yields on their deposited assets.  Pools are tokenized and respect the ERC4626 standard so you could use it elsewhere in the DeFi space. Contracts are modular, different borrow module can be plugged (free to add flash loan or unused capital allocator modules in the future), and the interest rate model can be changed at any time.
 
-Consider stablecoin pairs, where the relative price of the two assets stays relatively constant. The liquidity outside the typical price range of a stablecoin pair is rarely touched. For example, the v2 DAI/USDC pair utilizes ~0.50% of the total available capital for trading between $0.99 and $1.01, the price range in which LPs would expect to see the most volume - and consequently earn the most fees.
 
-With v3, liquidity providers may concentrate their capital to smaller price intervals than (0, ∞). In a stablecoin/stablecoin pair, for example, an LP may choose to allocate capital solely to the 0.99 - 1.01 range. As a result, traders are offered deeper liquidity around the mid-price, and LPs earn more trading fees with their capital. We call liquidity concentrated to a finite interval a position. LPs may have many different positions per pool, creating individualized price curves that reflect the preferences of each LP.
+## Interest Rate model
 
-## Active Liquidity
+The protocol adjusts interest rates based on liquidity conditions. Low interest rates encourage borrowing when capital is abundant, while high interest rates incentivize debt repayment and additional capital supply when liquidity is scarce. Liquidity risk materialises when utilisation is high, and this becomes more problematic as the utilisation gets closer to 100%.
 
-As the price of an asset rises or falls, it may exit the price bounds that LPs have set in a position. When the price exits a position's interval, the position's liquidity is no longer active and no longer earns fees.
+### Linear interest rate model
 
-As price moves in one direction, LPs gain more of the one asset as swappers demand the other, until their entire liquidity consists of only one asset. (In v2, we don't typically see this behavior because LPs rarely reach the upper or lower bound of the price of two assets, i.e., 0 and ∞). If the price ever reenters the interval, the liquidity becomes active again, and in-range LPs begin earning fees once more.
+The linear interest rate curve is split in two parts around an optimal utilisation rate Uo. Before the slope is small, after it begins rising sharply.
 
-Importantly, LPs are free to create as many positions as they see fit, each with its own price interval. Concentrated liquidity serves as a mechanism to let the market decide what a sensible distribution of liquidity is, as rational LPs are incentivize to concentrate their liquidity while ensuring that their liquidity remains active.
+1. Base Parameters:
+   - Base Rate (R0): The minimum interest rate applied when utilization is low (e.g., 0%).
+   - Optimal Utilization Rate (U_opt): The target utilization rate before the kink (e.g., 80%).
+   - Slope 1 (S1): The slope of the linear interest rate model before the kink (e.g., 0.20).
+   - Slope 2 (S2): The slope of the linear interest rate model after the kink (e.g., 1.00).
 
-## Ticks
+2. Utilization Rate (U):
+   U = Total Borrows / (Total Borrows + Available Liquidity)
 
-To achieve concentrated liquidity, the once continuous spectrum of price space has been partitioned with ticks.
+3. Interest Rate Model:
+   - When U <= U_opt:
+     Borrow Rate (R) = R0 + U * S1
+   - When U > U_opt:
+     Borrow Rate (R) = R0 + U_opt * S1 + (U - U_opt) * S2
 
-Ticks are the boundaries between discrete areas in price space. Ticks are spaced such that an increase or decrease of 1 tick represents a 0.01% increase or decrease in price at any point in price space.
+Supply Rate (R_supply) = R_borrow * U * (1 - RF)
 
-Ticks function as boundaries for liquidity positions. When a position is created, the provider must choose the lower and upper tick that will represent their position's borders.
 
-As the spot price changes during swapping, the pool contract will continuously exchange the outbound asset for the inbound, progressively using all the liquidity available within the current tick interval[^1] until the next tick is reached. At this point, the contract switches to a new tick and activates any dormant liquidity within a position that has a boundary at the newly active tick.
+### PID Controller
 
-While each pool has the same number of underlying ticks, in practice only a portion of them are able to serve as active ticks. Due to the nature of the v3 smart contracts, tick spacing is directly correlated to the swap fee. Lower fee tiers allow closer potentially active ticks, and higher fees allow a relatively wider spacing of potential active ticks.
+Morphine's plan to transition from a linear interest rate model with a kink to a PID (Proportional-Integral-Derivative) controller rate model is driven by the desire to improve the platform's adaptability and responsiveness to market conditions. Here are some reasons behind this transition:
 
-While inactive ticks have no impact on transaction cost during swaps, crossing an active tick does increase the cost of the transaction in which it is crossed, as the tick crossing will activate the liquidity within any new positions using the given tick as a border.
+- **Enhanced adaptability**: A PID controller rate model can better adapt to fluctuations in market conditions, such as varying demand for borrowing and lending, by continuously adjusting the interest rates in real-time. This adaptability can lead to a more balanced and efficient market on the platform.
 
-In areas where capital efficiency is paramount, such as stable coin pairs, narrower tick spacing increases the granularity of liquidity provisioning and will likely lower price impact when swapping - the result being significantly improved prices for stable coin swaps.
+- **Improved stability**: By quickly reacting to changes in supply and demand, the PID controller rate model can help maintain the stability of the platform. It prevents sudden spikes or drops in interest rates that could otherwise disrupt the equilibrium between lenders and borrowers.
 
-For more information on fee levels and their correlation to tick spacing, see the [whitepaper](https://uniswap.org/whitepaper-v3.pdf).
+- **Optimized utilization**: The PID controller model can optimize the utilization of the lending pools, ensuring that interest rates are set at a level that encourages borrowing without depleting the liquidity pools entirely.
 
-[^1]: Tick interval refers to the area of price space between two nearest active ticks
+- **Greater precision**: The PID controller model offers more precise control over interest rates than a linear model with a kink. This increased precision can lead to better market efficiency and a more attractive platform for both lenders and borrowers.
+
+
+## Boosted borrow rate
+
+Lenders face the risk of borrower default, which may result in the loss of their supplied assets. Additionally, there may be smart contract vulnerabilities or exploits that could lead to loss of funds.
+
+
