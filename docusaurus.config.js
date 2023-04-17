@@ -23,7 +23,7 @@ module.exports = {
   themeConfig: {
     image: 'img/grow.png',
     prism: {
-      additionalLanguages: ['cairo'],
+      additionalLanguages: ['solidity'],
     },
     algolia: {
       apiKey: '32465e2ab6f7554ff014e64c0d92171c',
