@@ -21,9 +21,9 @@ module.exports = {
   organizationName: 'DeLightFi', // Usually your GitHub org/user name.
   projectName: 'DeLightFi-docs', // Usually your repo name.
   themeConfig: {
-    image: 'img/twitter_card_bg.jpg',
+    image: 'img/grow.png',
     prism: {
-      additionalLanguages: ['solidity'],
+      additionalLanguages: ['cairo'],
     },
     algolia: {
       apiKey: '32465e2ab6f7554ff014e64c0d92171c',
@@ -33,7 +33,7 @@ module.exports = {
     navbar: {
       title: 'DeLightFi Docs',
       logo: {
-        alt: 'Uniswap Unicorn',
+        alt: 'DeLightFi logo',
         src: 'img/uni_dark_icon.svg',
       },
       items: [
