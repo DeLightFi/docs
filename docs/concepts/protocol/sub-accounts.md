@@ -1,7 +1,7 @@
 ---
-id: fees
-title: Fees
-sidebar_position: 3
+id: sub-accounts
+title: Sub Accounts
+sidebar_position: 4
 ---
 
 **Interest Fees**: Morphine charges a 30% platform fee from borrower interest, allocated as follows:
