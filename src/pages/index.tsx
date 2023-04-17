@@ -35,15 +35,15 @@ export const actions = [
   //   text: `Learn how to integrate with Morphine by building a dApp through guided examples.`,
   // },
   {
-    title: 'Integrate with Starken',
+    title: 'Discover Starken features!',
     icon: HelpCircle,
-    to: '/sdk/v3/overview',
-    text: `Use our SDK to make your life easier building DeFi on Starknet`,
+    to: '/concepts/starken-app/portfolio_tracking',
+    text: `The Starknet portfolio is finally here!`,
   },
   {
     title: 'Morphine smart contracts',
     icon: BookOpen,
-    to: '/contracts/v3/overview',
+    to: '/concepts/morphine-contracts',
     text: `Learn about the architecture of Morphine Protocol smart contracts through guided examples.`,
   },
 ]
@@ -462,7 +462,7 @@ export default function Home() {
             section={SectionName.BOTTOM_MENU_LINKS}
             name={SharedEventName.PAGE_CLICKED}
           >
-            <Link style={{ textDecoration: 'none' }} href={'https://discord.gg/ybKVQUWb4s'}>
+            <Link style={{ textDecoration: 'none' }} href={'https://discord.com/invite/hJupqTrK4G'}>
               <CenterCard>
                 <Discord style={{ width: '48px', height: '48px' }} />
                 <div>
@@ -479,7 +479,7 @@ export default function Home() {
             element={ElementName.GITHUB}
             name={SharedEventName.PAGE_CLICKED}
           >
-            <Link style={{ textDecoration: 'none' }} href={'https://github.com/Uniswap'}>
+            <Link style={{ textDecoration: 'none' }} href={'https://github.com/DeLightFi'}>
               <CenterCard>
                 <StyledIcon>
                   <GitHub style={{ width: '48px', height: '48px' }} />
@@ -499,7 +499,7 @@ export default function Home() {
             margin: '0 auto 4rem auto',
             width: '100%',
           }}
-          href={'https://unigrants.org/'}
+          href={'https://app.onlydust.xyz/projects/54f2df5e-decb-44d8-9a6e-d35f9b292569'}
         >
           <WideCard
             style={{

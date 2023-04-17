@@ -43,27 +43,17 @@ module.exports = {
           position: 'left',
           className: 'V3_active',
         },
+
+        // {
+        //   to: '/sdk/v3/overview',
+        //   label: 'SDKs',
+        //   position: 'left',
+        //   className: 'V3_active',
+        // },
+
         {
-          to: '/contracts/v3/overview',
-          label: 'Contracts',
-          position: 'left',
-          className: 'V3_active',
-        },
-        {
-          to: '/sdk/v3/overview',
-          label: 'SDKs',
-          position: 'left',
-          className: 'V3_active',
-        },
-        {
-          to: '/api/subgraph/overview',
-          label: 'APIs',
-          position: 'left',
-          className: 'V3_active',
-        },
-        {
-          label: 'Give Feedback',
-          to: 'https://forms.gle/13XtjmkwdXQ2jMn26',
+          label: 'Contact',
+          to: 'https://t.me/SachaEth',
           position: 'right',
           className: 'persistent',
         },
