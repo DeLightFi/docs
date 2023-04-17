@@ -71,10 +71,7 @@ module.exports = {
         {
           title: 'Developers',
           items: [
-            {
-              label: 'Feedback',
-              href: 'https://forms.gle/13XtjmkwdXQ2jMn26',
-            },
+
             {
               label: '#dev-chat',
               href: 'https://discord.gg/hJupqTrK4G',
@@ -120,7 +117,7 @@ module.exports = {
             },
             {
               label: 'Twitter',
-              href: 'https://twitter.com/Uniswap',
+              href: 'https://twitter.com/DeLightFi_',
             },
             {
               label: 'Blog',
