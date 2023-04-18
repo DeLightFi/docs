@@ -18,7 +18,7 @@ Morphine tackles this problem by:
 
 1. **Pool exposure limit**: Morphine sets a cap on the concentration of any single token in the pool, reducing the overall risk for lenders and ensuring diversification. 
 
-2. **Borrow rate booster**: Morphine introduces a mechanism that increases the borrow rate for borrowers using potentially riskier assets (e.g., staked tokens) as collateral. This compensates lenders for the additional risk they assume and incentivizes borrowers to use a wider range of collateral types. This boost is related to a risk factor,set by the governance (will be then availanble from on-chain data feed).
+2. **Borrow rate booster**: Morphine introduces a mechanism that increases the borrow rate for borrowers using potentially riskier assets (e.g., staked tokens) as collateral. This compensates lenders for the additional risk they assume and incentivizes borrowers to use a wider range of collateral types. This boost is related to a risk factor,set by the governance (will be then automatic, taking the risk factor from on-chain data feed).
 
 ## One-shot liquidation
 
@@ -50,4 +50,7 @@ While the platform aims to provide users with a wide range of possibilities by i
 
 ## Data Feed 
 
-We are using Pragma for providing reliable and transparent pricefeeds.
+We are using Pragma for providing reliable and transparent datafeeds:  
+- Token Pricing (calculate collateral value)
+- Volatility (liquidation threshold)
+- Yield strategies risk metrics (risk factor)

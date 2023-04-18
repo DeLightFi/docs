@@ -61,10 +61,10 @@ Morphine's plan to transition from a linear interest rate model with a kink to a
 
 ![Alt text](https://2568935805-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FVftpiRFt5R5ezJhT7UPM%2Fuploads%2FdhP0eN10LBdYb21r58uM%2Fimage.png?alt=media&token=5e509333-2987-4205-8a9d-1125338aa230)
 
-Borrow rate =  U(t)*Scaling factor + E(t)*KP + Ki*sum(E(t)) + dE(t)/dt * Kd
-U(t) : Pool Utilization
-E(t) : Optimal Pool Utilization - Pool utilization
-Scaling Factor, KP, Ki, Kd and Optimal Pool Utilization are model parameters
+Borrow rate =  U(t)*Scaling factor + E(t)*KP + Ki*sum(E(t)) + dE(t)/dt * Kd  
+U(t) : Pool Utilization  
+E(t) : Optimal Pool Utilization - Pool utilization  
+Scaling Factor, KP, Ki, Kd and Optimal Pool Utilization are model parameters  
 
 You can run this [script](https://colab.research.google.com/drive/1S_FAbyR_Qm0lfqI5OkVepY5wjlTo2l7p?usp=sharing) to simulate the PID.  
 Some traders are "intelligent" and will borrow/repay regarding the borrow rate 

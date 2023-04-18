@@ -37,7 +37,7 @@ For example, if you deposit 100 DAI as collateral and the pool charges 2% liquid
 
 ### Accumulated Debt 
 
-Obtaining leverage has a standard cost for all borrowers, which is the borrow rate calculated by the integrated interest rate model (currently linear with a kink). However, to account for the increased risk to lenders when borrowers invest in riskier assets, borrowers using these assets will face a higher borrow rate. This boosted rate depends on a multiplier, which is determined by the governance considering both the risk associated with the asset and the proportion of that risky asset in the borrower's portfolio. This innovative approach ensures that lenders are fairly compensated for the additional risk while maintaining an accessible and dynamic borrowing environment.
+Obtaining leverage has a standard cost for all borrowers, which is the borrow rate calculated by the integrated interest rate model (currently linear with a kink). However, to account for the increased risk to lenders when borrowers invest in riskier assets, borrowers using these assets will face a higher borrow rate. This boosted rate depends on a multiplier, which is determined by the governance (soon accessible on-chain) considering both the risk associated with the asset and the proportion of that risky asset in the borrower's portfolio. This innovative approach ensures that lenders are fairly compensated for the additional risk while maintaining an accessible and dynamic borrowing environment.
 
 
 ## Sub-account Management

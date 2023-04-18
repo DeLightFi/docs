@@ -4,11 +4,25 @@ title: Contribution
 sidebar_position: 3
 ---
 
-**Interest Fees**: Morphine charges a 30% platform fee from borrower interest, allocated as follows:
+# Early Testers (Available during testnet)
+- Mint Morphine Faucet Tokens
+- Supply liquidity during Testnet
+- Share affiliation Link 
+- Claim NFT Pass during Testnet
+- Open a Drip, swap, deposit, redeem, bring Liq, remove Liq, Close Drip
+- Open a Drip using on-click copy paste strategy
+- Get Liquidated because of low collateral
+- Get Liquidated because of expiration
 
-- 50% to 100% is supplied and ready to be burned in case of pool loss. This provides an additional layer of security for lenders, ensuring that the pool remains resilient even during market downturns.
-- Up to 50% may be transferred to products built on top of Morphine (e.g., Vaults). This fosters innovation and encourages the development of new DeFi products that leverage Morphine.
+## Cairo Wizard 🧙‍♂️
+- Find a task (contributions are paused due to cairo transition)
+- Apply by submitting an issue on the git
+- If accepted, we'll set up a channel to exchange and help all along the process
+- Build and submit a PR once you are done
+- Become a contributor and get paid
 
-**Liquidation Fees**: The prime size depends on the pool parameter, currently set at 3%. Out of this, 1/3 is sent to the insurance fund, while the remaining 2/3 goes to the liquidator. This structure fairly compensates liquidators for their risk and effort while maintaining a healthy insurance fund to protect lenders from potential losses.
+## Designer / Artist 🎨
+- Soon available
 
-**Rebalancing Fees**: The prime size depends on the concerned sub-account. 1/3 is sent to the insurance fund, and the remaining 2/3 goes to the rebalancer. This fee distribution strikes a balance between incentivizing takers to ensure borrowers sub-account rebalancing is completed, and maintaining an adequately funded insurance fund to cover any potential risks.
+## Communication / Community management 🔊
+- Soon available

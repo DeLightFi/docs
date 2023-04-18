@@ -32,13 +32,13 @@ Pool contract is an ERC4626 token providing rewards to the suppliers, paid by th
 The interest rate model is calculated from an external contract, so it can be upgraded if needed. Currently, the linear interest rate model is used.
 
 **Sub_account Transit**  
-Sub_acount Transit contract is used by borrowers to create and manage their drip (add collateral, decrease debt, perform calls..). This contract also manages access and allowances and provides utils functions for takers.
+Sub_acount Transit contract is used by borrowers to create and manage their sub_account (add collateral, decrease debt, perform calls..). This contract also manages access and allowances and provides utils functions for takers.
 
 **Sub_account Configurator**  
 Sub_account Configurator contract can only be used by the admin, to manage allowed tokens, allowed integrations, borrow and liquidation parameters.
 
 **Sub_account Manager**  
-Sub_account Manager contract contains all the logic to create, manage, close or liquidate a Sub_account. Sub_account manager is used by drip configurator to set parameters and by drip transit to execute actions on drip if allowed.
+Sub_account Manager contract contains all the logic to create, manage, close or liquidate a Sub_account. Sub_account manager is used by sub_account configurator to set parameters and by sub_account transit to execute actions on sub_account if allowed.
 
 **Adapters**  
 Adapters contracts are smart contracts that act as intermediaries or connectors to facilitate interactions between different protocols. They are designed to standardize and simplify the process of integrating with other protocols by abstracting the complexity of interacting with different interfaces or implementations.
