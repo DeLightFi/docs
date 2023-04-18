@@ -5,7 +5,7 @@ sidebar_position: 2
 ---
 
 
-Morphine is a non-custodial, permissionless, undercollateralized money market protocol on Starknet that empowers users in their DeFi journey by providing low-risk, attractive APY lending opportunities and a comprehensive toolkit for active management. With features like composable leverage, composable automation, and seamless integration across a range of DeFi products, Morphine seamlessly integrates the advantages of both centralized exchanges and DeFi, providing an intuitive, user-friendly experience while harnessing the full potential of decentralized finance.
+Morphine is a non-custodial, permissionless, undercollateralized money market protocol on Starknet that empowers users in their DeFi journey by providing low-risk, attractive APY lending opportunities and a comprehensive toolkit for active management. With features like composable leverage, composable automation, and seamless integration across a range of DeFi products, Morphine integrates the advantages of both centralized exchanges and DeFi, providing an intuitive, user-friendly experience while harnessing the full potential of decentralized finance.
 
 A first version has been released on Testnet goerli 2.
 
