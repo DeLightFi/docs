@@ -29,7 +29,7 @@ The protocol also differs significantly from traditional overcollateralized loan
 
 ## Why Starknet ? 
 
-Morphine is built on Starknet, a ZK-rollup over Ethereum, for several key reasons that contribute to its overall functionality, efficiency, and security:
+We are building DeFi on Starknet because it offers unparalleled scalability, low transaction costs, and strong security guarantees inherited from Ethereum. Its unique Cairo execution environment enables innovative smart contract functionality, and the rapidly growing ecosystem attracts top-tier talent and investment, ensuring a thriving DeFi future on Starknet.
 
 ### Scalability
 
@@ -41,7 +41,7 @@ Starknet inherits the security of the Ethereum blockchain while also leveraging 
 
 ### Vision
 
-Starknet is aligns with Ethereum's philosophy and vision for a decentralized future. As pioneers in the industry, both Starknet and Ethereum have robust and supportive communities that contribute to the growth of a thriving DeFi ecosystem. By choosing Starknet, Morphine actively supports and participates in this vibrant ecosystem, benefiting from its innovative developments and collaborative spirit.
+Starknet is aligns with Ethereum's philosophy  is the le for a decentralized future. By choosing Starknet, Morphine actively supports and participates in this vibrant ecosystem, benefiting from its innovative developments and collaborative spirit.
 
 ### Account abstraction
 

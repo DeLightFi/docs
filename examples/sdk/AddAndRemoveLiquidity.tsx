@@ -13,6 +13,8 @@ const poolAddress = '0x6c6bc977e13df9b0de53b251522280bb72383700'
 
 const poolContract = new ethers.Contract(poolAddress, IUniswapV3PoolABI, provider)
 
+
+
 interface Immutables {
   factory: string
   token0: string
