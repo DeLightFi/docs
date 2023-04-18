@@ -11,6 +11,7 @@ Morphine sub-accounts empower your DeFi experience with extraordinary capabiliti
 
  Morphine sub-accounts enable users to leverage their assets between 12x and 15x, granting them greater borrowing power. This feature allows borrowers to capitalize on opportunities in the DeFi market while managing their risk exposure.
 
+![Alt text](./images/leverage.png)
 
 
 ### Weighted Collateral
@@ -63,6 +64,10 @@ Manual intervention provides users with control over their sub-accounts, allowin
 ### Composable automations
 
 You can set composable automated reallocation tasks for your sub-account management. Define condition and result, takers will be allowed to flash loan your sub_account and execute call to complete your task and for a prime.
+
+
+![Alt text](./images/automation.png)
+
 
 **Rebalancing Condition:** Create or use a pre-built condition from our bank. The condition must contain a method `is_task_available` that returns a boolean. Inside, you can access various data to build logic, such as the health factor value (for liquidation protection) or the balances and prices of tokens in the sub-account (for take profit/stop loss or copy trading).
 
