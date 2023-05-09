@@ -21,7 +21,7 @@ module.exports = {
   organizationName: 'DeLightFi', // Usually your GitHub org/user name.
   projectName: 'DeLightFi-docs', // Usually your repo name.
   themeConfig: {
-    image: 'img/grow.png',
+    image: 'https://docs.delightfi.xyz/img/grow.png',
     prism: {
       additionalLanguages: ['solidity'],
     },

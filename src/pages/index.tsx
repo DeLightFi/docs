@@ -313,8 +313,8 @@ export default function Home() {
           </div>
           <StyledTitleImage
             sources={{
-              light: useBaseUrl('/img/grow.png'),
-              dark: useBaseUrl('/img/grow.png'),
+              light: `https://docs.delightfi.xyz/img/grow.png`,
+              dark: `https://docs.delightfi.xyz/img/grow.png`,
             }}
           />
           <Row>
